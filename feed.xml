@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Darkholm: What's New</title>
+  <link>https://darkholm.live/news.html</link>
+  <description>Updates and events on the Darkholm Minecraft server.</description>
+  <language>en</language>
+  <item>
+    <title>The monthly build contest</title>
+    <link>https://darkholm.live/news.html#monthly-build-contest</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#monthly-build-contest</guid>
+    <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Community</category>
+    <description>Build something, post a screenshot in the Discord, win crate keys. Each month has a theme, announced in the Discord. Post one screenshot of your build in the Discord before the month ends. Prizes: 1st place 3 Gold Keys, 2nd place 2 Silver Keys, 3rd place 1 Bronze Key. Winners are named here and on our Facebook page.</description>
+  </item>
+  <item>
+    <title>Prizes for the month&#x27;s top three voters</title>
+    <link>https://darkholm.live/news.html#monthly-top-voters</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#monthly-top-voters</guid>
+    <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Voting</category>
+    <description>The three players with the most votes each month now win crate keys. 1st place: $10,000, 100 levels and 3 Emerald Keys. 2nd place: 2 Gold Keys. 3rd place: 1 Gold Key. Streaks still pay too: 7 days in a row earns $1,000 and 20 levels, 30 days earns $5,000 and 50 levels.</description>
+  </item>
+  <item>
+    <title>The vote crates come to the Great Hall</title>
+    <link>https://darkholm.live/news.html#great-hall-crates</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#great-hall-crates</guid>
+    <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Great Hall</category>
+    <description>All seven reward crates now stand in the Great Hall, where every player arrives. Vote, Gold, Bronze and Enchanter&#x27;s crates line the north wall west of the north gate; Emerald, Silver and Spawner stand to the east. They are the same crates as the castle hall, so a key works at either one.</description>
+  </item>
+  <item>
+    <title>The Great Hall carries your pack</title>
+    <link>https://darkholm.live/news.html#hub-inventory</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#hub-inventory</guid>
+    <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Great Hall</category>
+    <description>In the Great Hall you now hold the inventory of the realm you just left. Come in from OneBlock and you have your OneBlock gear; come in from Darkholm and you have your Darkholm gear. Anything you gain or use in the Great Hall, such as crate rewards and keys, is saved back to that realm. Realms still keep separate inventories from each other.</description>
+  </item>
+  <item>
+    <title>A hoe in every kit</title>
+    <link>https://darkholm.live/news.html#kit-hoes</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#kit-hoes</guid>
+    <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Kits</category>
+    <description>Every kit, from Starter to King, now includes a hoe that matches its other tools. Starter gets stone, Squire and Knight iron, Baron to Earl diamond, Duke and up netherite. Viscount and higher kits get Fortune III on the hoe for more crops and seeds.</description>
+  </item>
+  <item>
+    <title>New tutorials</title>
+    <link>https://darkholm.live/news.html#tutorials</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#tutorials</guid>
+    <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Website</category>
+    <description>A Tutorials page with three guides written from builds on the server. How to Connect: step-by-step for Java and Bedrock. TNT Cannons: three cannons tested on Darkholm with measured ranges. OneBlock Loot Flush Farm: a one-button farm that washes loot into chests.</description>
+  </item>
+  <item>
+    <title>Market vendors open in the bazaar</title>
+    <link>https://darkholm.live/news.html#market-vendors</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#market-vendors</guid>
+    <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Economy</category>
+    <description>Nine vendors now trade in the Darkholm bazaar. Farmer Aldric, Baker Maude, Butcher Gorm, Alchemist Isolde, Fletcher Wren, Blacksmith Torvald, Stablemaster Hal, Mason Edric and Tinker Bram. They buy farm goods, mob drops and materials up to a daily limit per player, and sell their wares. Ask the Herald in chat about the market for details.</description>
+  </item>
+  <item>
+    <title>Every Java version can join</title>
+    <link>https://darkholm.live/news.html#all-java-versions</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#all-java-versions</guid>
+    <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Server</category>
+    <description>All Java Edition versions can now connect to play.darkholm.live. No more version errors on older or newer clients. Bedrock still joins at bedrock.darkholm.live, port 8178.</description>
+  </item>
+</channel>
+</rss>

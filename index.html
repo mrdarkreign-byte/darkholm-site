@@ -13,6 +13,7 @@
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="905">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Darkholm news" href="/feed.xml">
 <title>Darkholm</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,8 +167,16 @@ section.page.on{display:block}
 
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
+.live{display:inline-flex;gap:10px;align-items:center;font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment);text-shadow:0 2px 8px #000;flex-wrap:wrap;justify-content:center}
+.live .dot{width:9px;height:9px;border-radius:50%;background:#55FF55;box-shadow:0 0 8px #55FF55}
+.live .dc::before{content:"·";margin-right:10px;color:var(--gold)}
+.npost .meta{font-family:var(--display);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.npost .meta b{color:var(--ember);font-weight:400;margin-left:8px}
+.npost h3 a{color:var(--gold-hi);text-decoration:none}
+.npost h3 a:hover{text-decoration:underline}
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--gold);color:#120b02;padding:8px 16px;font-weight:700;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
+@media (max-width:560px){.hero .ips{width:100%}.hero .ip{width:100%;justify-content:space-between}.ip code{font-size:1.2rem;overflow-wrap:anywhere}.hero .ips .btn{flex:1 1 100%}.hero .inner{min-width:0}}
 @media (max-width:560px){.cmds{grid-template-columns:1fr}.cmds dd{margin-bottom:8px}.hero{min-height:540px}.hero .inner{padding-top:110px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -178,6 +187,8 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
   <nav aria-label="Site">
     <a href="#home">Home</a>
     <a href="#play">How to Join</a>
+    <a href="news.html">News</a>
+    <a href="community.html">Community</a>
     <a href="#store">Store</a>
     <a href="#codex">Help</a>
     <a href="#vote">Vote</a>
@@ -202,6 +213,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
       <div class="ip"><div><small>Bedrock · port 8178</small><code>bedrock.darkholm.live</code></div><button data-copy="bedrock.darkholm.live">Copy</button></div>
     </div>
     <div class="ips"><a class="btn solid" href="#play">Enter the Realm</a><a class="btn blood" href="https://discord.gg/yGE9cgzbw">Join the Discord</a></div>
+    <p class="live" id="liveCount"><span class="dot" aria-hidden="true"></span><span class="txt">Checking the gates…</span><span class="dc hidden" id="dcCount"></span></p>
   </div>
 </div>
 
@@ -214,6 +226,19 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
     <div class="panel realm" style="--c:#55FFFF"><span class="sigil"></span><h3>North Gate<br>The Guild</h3><p>The Adventurers' Guild and every EliteMobs world. Story dungeons, lairs, enchantment challenges and the Guild Exchange. Deaths here cost no faction power.</p><p class="k">/ag</p></div>
     <div class="panel realm" style="--c:#55FF55"><span class="sigil"></span><h3>East Gate<br>OneBlock</h3><p>Your own island, grown one block at a time through each phase. Invite friends to build it with you.</p><p class="k">/ob</p><p><a href="oneblock-farm.html">Build guide: the Loot Flush Farm</a></p></div>
   </div>
+  <div id="newsWrap" class="stack hidden">
+    <div class="head"><p class="eyebrow">The Town Crier</p><h2 class="gilt">What's New</h2><div class="flourish" aria-hidden="true">⚜</div></div>
+    <div class="grid g3" id="newsList"></div>
+    <p style="text-align:center"><a class="btn" href="news.html">All news</a></p>
+  </div>
+
+  <div class="head"><p class="eyebrow">The Fellowship</p><h2 class="gilt">Join the Fellowship</h2><div class="flourish" aria-hidden="true">⚜</div></div>
+  <div class="grid g3">
+    <div class="panel"><h3>Monthly build contest</h3><p>A new theme every month in the Discord. Post a screenshot of your build; the top three win Gold, Silver and Bronze Keys.</p><p><a href="community.html#contest">Contest rules →</a></p></div>
+    <div class="panel"><h3>Top voters win</h3><p>The month's three biggest voters win Emerald and Gold Keys, and first place takes $10,000 and 100 levels as well.</p><p><a href="community.html#top-voters">Prizes →</a></p></div>
+    <div class="panel"><h3>Follow the realm</h3><p>News, contest winners and screenshots on <a href="https://discord.gg/yGE9cgzbw">Discord</a> and <a href="https://www.facebook.com/profile.php?id=61595970767748">Facebook</a>. Share your own clips in the Discord.</p><p><a href="community.html">Community page →</a></p></div>
+  </div>
+
   <div id="galleryWrap" class="stack hidden">
     <div class="head"><p class="eyebrow">Seen in Darkholm</p><h2 class="gilt">From the Realm</h2><div class="flourish" aria-hidden="true">⚜</div></div>
     <div class="gallery" id="gallery"></div>
@@ -278,13 +303,18 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
     <div class="panel"><h3>7 sites in a day</h3><p class="k">$475 + 10 levels</p></div>
     <div class="panel"><h3>Bonus keys</h3><p class="k">+1 key at 5 votes<br>+2 keys at all 11</p></div>
   </div>
-  <p class="lede">Open Vote Keys at the Vote Crate in the castle hall (<span style="font-family:var(--pixel);color:#FFFF55">/warp darkholm</span>). It can drop tier keys: <span class="mc6">Bronze</span>, <span class="mcf">Silver</span>, <span class="mce">Gold</span>, <span class="mca">Emerald</span>, <span class="mcd">Enchanter</span> and <span class="mcc">Spawner</span>.</p>
+  <div class="grid g2">
+    <div class="panel"><h3>Vote streaks</h3><p class="k">7 days in a row: $1,000 + 20 levels<br>30 days in a row: $5,000 + 50 levels</p></div>
+    <div class="panel"><h3>Top voters each month</h3><p class="k">1st: $10,000 + 100 levels + 3 Emerald Keys<br>2nd: 2 Gold Keys<br>3rd: 1 Gold Key</p><p>Check the race with <span class="k">/vote top</span>.</p></div>
+  </div>
+  <p class="lede">Open Vote Keys at the Vote Crate in the Great Hall, where you arrive, or in the castle hall (<span style="font-family:var(--pixel);color:#FFFF55">/warp darkholm</span>). It can drop tier keys: <span class="mc6">Bronze</span>, <span class="mcf">Silver</span>, <span class="mce">Gold</span>, <span class="mca">Emerald</span>, <span class="mcd">Enchanter</span> and <span class="mcc">Spawner</span>.</p>
   <div class="votes" id="votes"></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
   <span>Darkholm · founded by Astidonius_</span>
+  <span class="social"><a href="https://discord.gg/yGE9cgzbw">Discord</a> · <a href="https://www.facebook.com/profile.php?id=61595970767748">Facebook</a> · <a href="news.html">News</a> · <a href="/feed.xml">RSS</a></span>
   <span>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</span>
 </div></footer>
 <div class="toast" id="toast" role="status">Copied</div>
@@ -658,6 +688,35 @@ document.addEventListener('click',async e=>{
 window.addEventListener('hashchange',route);
 buildCodex(); buildStore(); buildVotes(); buildGallery(); drawSky(); route();
 let rt; window.addEventListener('resize',()=>{clearTimeout(rt); rt=setTimeout(drawSky,150);});
+
+/* Live player count (mcstatus.io) and Discord size. Discord size shows once it passes DISCORD_MIN. */
+const DISCORD_MIN = 50;
+(async()=>{
+  const live=document.getElementById('liveCount'); if(!live) return;
+  const txt=live.querySelector('.txt');
+  try{
+    const j=await (await fetch('https://api.mcstatus.io/v2/status/java/play.darkholm.live')).json();
+    if(j.online){const n=(j.players&&j.players.online)||0;
+      txt.textContent = n>0 ? `${n} ${n===1?'adventurer':'adventurers'} in the realm now` : 'The realm is open: be the first in';}
+    else{ txt.textContent='The gates are closed for a moment'; live.querySelector('.dot').style.background='#FFAA00'; }
+  }catch(e){ live.classList.add('hidden'); }
+  try{
+    const d=await (await fetch('https://discord.com/api/v9/invites/yGE9cgzbw?with_counts=true')).json();
+    if(d.approximate_member_count>=DISCORD_MIN){const dc=document.getElementById('dcCount');
+      dc.textContent=`${d.approximate_member_count.toLocaleString()} in the Discord`; dc.classList.remove('hidden');}
+  }catch(e){}
+})();
+
+/* Latest three posts from news.json */
+(async()=>{
+  try{
+    const items=(await (await fetch('news.json',{cache:'no-cache'})).json()).slice(0,3);
+    const e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{day:'numeric',month:'long',year:'numeric'});
+    document.getElementById('newsList').innerHTML=items.map(n=>`<div class="panel npost"><p class="meta">${fmt(n.date)}<b>${e(n.tag)}</b></p><h3><a href="news.html#${e(n.id)}">${e(n.title)}</a></h3><p>${e(n.summary)}</p></div>`).join('');
+    document.getElementById('newsWrap').classList.remove('hidden');
+  }catch(e){}
+})();
 </script>
 </body>
 </html>

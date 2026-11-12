@@ -1,0 +1,58 @@
+[
+ {
+  "id": "monthly-build-contest",
+  "date": "2026-11-12",
+  "tag": "Community",
+  "title": "The monthly build contest",
+  "summary": "Build something, post a screenshot in the Discord, win crate keys."
+ },
+ {
+  "id": "monthly-top-voters",
+  "date": "2026-11-12",
+  "tag": "Voting",
+  "title": "Prizes for the month's top three voters",
+  "summary": "The three players with the most votes each month now win crate keys."
+ },
+ {
+  "id": "great-hall-crates",
+  "date": "2026-11-11",
+  "tag": "Great Hall",
+  "title": "The vote crates come to the Great Hall",
+  "summary": "All seven reward crates now stand in the Great Hall, where every player arrives."
+ },
+ {
+  "id": "hub-inventory",
+  "date": "2026-11-11",
+  "tag": "Great Hall",
+  "title": "The Great Hall carries your pack",
+  "summary": "In the Great Hall you now hold the inventory of the realm you just left."
+ },
+ {
+  "id": "kit-hoes",
+  "date": "2026-11-11",
+  "tag": "Kits",
+  "title": "A hoe in every kit",
+  "summary": "Every kit, from Starter to King, now includes a hoe that matches its other tools."
+ },
+ {
+  "id": "tutorials",
+  "date": "2026-11-11",
+  "tag": "Website",
+  "title": "New tutorials",
+  "summary": "A Tutorials page with three guides written from builds on the server."
+ },
+ {
+  "id": "market-vendors",
+  "date": "2026-11-10",
+  "tag": "Economy",
+  "title": "Market vendors open in the bazaar",
+  "summary": "Nine vendors now trade in the Darkholm bazaar."
+ },
+ {
+  "id": "all-java-versions",
+  "date": "2026-11-10",
+  "tag": "Server",
+  "title": "Every Java version can join",
+  "summary": "All Java Edition versions can now connect to play.darkholm.live."
+ }
+]
