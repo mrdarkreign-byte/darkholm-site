@@ -614,6 +614,7 @@ let emberRAF=null;
 function drawSky(){
   const cv=$('#sky'), hero=$('#hero');
   const P=4, W=Math.ceil(hero.offsetWidth/P), H=Math.ceil(hero.offsetHeight/P);
+  if(!W||!H) return; // hidden or zero-size window: skip, redrawn on resize
   cv.width=W; cv.height=H; const x=cv.getContext('2d');
   let seed=7; const rnd=()=>((seed=(seed*16807)%2147483647)/2147483647);
   const scene=document.createElement('canvas'); scene.width=W; scene.height=H; const g=scene.getContext('2d');
@@ -686,9 +687,11 @@ document.addEventListener('click',async e=>{
   try{ await navigator.clipboard.writeText(b.dataset.copy); const t=$('#toast'); t.textContent='Copied '+b.dataset.copy; t.classList.add('on'); setTimeout(()=>t.classList.remove('on'),1400);}catch(_){ b.textContent='Select & copy'; }
 });
 window.addEventListener('hashchange',route);
-buildCodex(); buildStore(); buildVotes(); buildGallery(); drawSky(); route();
+buildCodex(); buildStore(); buildVotes(); buildGallery(); route(); try{drawSky();}catch(e){}
 let rt; window.addEventListener('resize',()=>{clearTimeout(rt); rt=setTimeout(drawSky,150);});
 
+</script>
+<script>
 /* Live player count (mcstatus.io) and Discord size. Discord size shows once it passes DISCORD_MIN. */
 const DISCORD_MIN = 50;
 (async()=>{
