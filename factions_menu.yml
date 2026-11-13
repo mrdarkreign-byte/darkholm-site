@@ -1,0 +1,298 @@
+name: '&8⚔ &6&lFactions &8⚔'
+size: 45
+fillItem:
+  material: 'GRAY_STAINED_GLASS_PANE'
+  name: '&r'
+items:
+  show:
+    slot: 10
+    item:
+      material: 'BOOK'
+      name: '&6Thy Faction'
+      lore:
+        - '&7Members, power, land and relations.'
+        - '&8/f show'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f show'
+  map:
+    slot: 11
+    item:
+      material: 'FILLED_MAP'
+      name: '&6Territory Map'
+      lore:
+        - '&7Who owns the land around thee.'
+        - '&8/f map'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f map'
+  list:
+    slot: 12
+    item:
+      material: 'PAPER'
+      name: '&6All Factions'
+      lore:
+        - '&7Every faction in the realm.'
+        - '&8/f list'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f list'
+  player:
+    slot: 13
+    item:
+      material: 'PLAYER_HEAD'
+      name: '&6Thy Power'
+      lore:
+        - '&7Thy power and faction standing.'
+        - '&8/f player'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f player'
+  status:
+    slot: 14
+    item:
+      material: 'CLOCK'
+      name: '&6Member Status'
+      lore:
+        - '&7Who in thy faction is online.'
+        - '&8/f status'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f status'
+  chat:
+    slot: 15
+    item:
+      material: 'OAK_SIGN'
+      name: '&6Faction Chat'
+      lore:
+        - '&7Switch chat channels.'
+        - '&8/f chat'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f chat'
+  perm:
+    slot: 16
+    item:
+      material: 'IRON_DOOR'
+      name: '&6Permissions'
+      lore:
+        - '&7Who may build and use things in thy land.'
+        - '&8/f perm'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f perm'
+  claim:
+    slot: 19
+    item:
+      material: 'GRASS_BLOCK'
+      name: '&aClaim This Chunk'
+      lore:
+        - '&7Claim the chunk thou standest in.'
+        - '&8/f claim one'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f claim one'
+  unclaim:
+    slot: 20
+    item:
+      material: 'COARSE_DIRT'
+      name: '&cUnclaim This Chunk'
+      lore:
+        - '&7Release the chunk thou standest in.'
+        - '&8/f unclaim one'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f unclaim one'
+  seechunk:
+    slot: 21
+    item:
+      material: 'GLASS'
+      name: '&eShow Chunk Borders'
+      lore:
+        - '&7Toggle the chunk border display.'
+        - '&8/f seechunk'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f seechunk'
+  home:
+    slot: 23
+    item:
+      material: 'RED_BED'
+      name: '&6Faction Home'
+      lore:
+        - '&7Travel to thy faction home.'
+        - '&8/f home'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f home'
+  sethome:
+    slot: 24
+    item:
+      material: 'WHITE_BED'
+      name: '&6Set Faction Home'
+      lore:
+        - '&7Set the faction home where thou standest.'
+        - '&8/f sethome'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f sethome'
+  unstuck:
+    slot: 25
+    item:
+      material: 'ENDER_PEARL'
+      name: '&6Unstuck'
+      lore:
+        - '&7Escape to the nearest wilderness.'
+        - '&8/f unstuck'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'f unstuck'
+  create:
+    slot: 28
+    item:
+      material: 'WHITE_BANNER'
+      name: '&aFound a Faction'
+      lore:
+        - '&7Start thine own faction.'
+        - '&8/f create <name>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/f create "}}, {"text": " to type ", "color": "gray"}, {"text": "/f create <name>", "color": "yellow"}]'
+  join:
+    slot: 29
+    item:
+      material: 'OAK_DOOR'
+      name: '&aJoin a Faction'
+      lore:
+        - '&7Join a faction that invited thee.'
+        - '&8/f join <faction>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/f join "}}, {"text": " to type ", "color": "gray"}, {"text": "/f join <faction>", "color": "yellow"}]'
+  invite:
+    slot: 30
+    item:
+      material: 'NAME_TAG'
+      name: '&aInvite a Player'
+      lore:
+        - '&7Invite someone into thy faction.'
+        - '&8/f invite add <player>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/f invite add "}}, {"text": " to type ", "color": "gray"}, {"text": "/f invite add <player>", "color": "yellow"}]'
+  relation:
+    slot: 31
+    item:
+      material: 'SHIELD'
+      name: '&eSet a Relation'
+      lore:
+        - '&7Ally, truce, neutral or enemy.'
+        - '&8/f relation set <faction> <relation>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/f relation set "}}, {"text": " to type ", "color": "gray"}, {"text": "/f relation set <faction> <ally|truce|neutral|enemy>", "color": "yellow"}]'
+  description:
+    slot: 32
+    item:
+      material: 'WRITABLE_BOOK'
+      name: '&eFaction Description'
+      lore:
+        - '&7Change thy faction''s description.'
+        - '&8/f description <text>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/f description "}}, {"text": " to type ", "color": "gray"}, {"text": "/f description <text>", "color": "yellow"}]'
+  leave:
+    slot: 34
+    item:
+      material: 'BARRIER'
+      name: '&cLeave Faction'
+      lore:
+        - '&7Leave thy current faction.'
+        - '&8/f leave'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/f leave"}}, {"text": " to type ", "color": "gray"}, {"text": "/f leave", "color": "yellow"}]'
+  close:
+    slot: 40
+    item:
+      material: 'OAK_DOOR'
+      name: '&cClose'
+    actions:
+      - type: 'close'

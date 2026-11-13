@@ -1,0 +1,178 @@
+name: '&8⚔ &a&lOneBlock &8⚔'
+size: 36
+fillItem:
+  material: 'GRAY_STAINED_GLASS_PANE'
+  name: '&r'
+items:
+  go:
+    slot: 10
+    item:
+      material: 'GRASS_BLOCK'
+      name: '&aGo to Thine Island'
+      lore:
+        - '&7Create or return to thine island.'
+        - '&8/ob go'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob go'
+  phases:
+    slot: 11
+    item:
+      material: 'BOOK'
+      name: '&6Phases'
+      lore:
+        - '&7The phases that lie ahead.'
+        - '&8/ob phases'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob phases'
+  count:
+    slot: 12
+    item:
+      material: 'CLOCK'
+      name: '&6Block Count'
+      lore:
+        - '&7Blocks broken so far and thy phase.'
+        - '&8/ob count'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob count'
+  info:
+    slot: 13
+    item:
+      material: 'PAPER'
+      name: '&6Island Info'
+      lore:
+        - '&7Thine island''s details.'
+        - '&8/ob info'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob info'
+  team:
+    slot: 14
+    item:
+      material: 'PLAYER_HEAD'
+      name: '&6Thy Team'
+      lore:
+        - '&7Members of thine island.'
+        - '&8/ob team'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob team'
+  settings:
+    slot: 15
+    item:
+      material: 'COMPARATOR'
+      name: '&6Island Settings'
+      lore:
+        - '&7What visitors may and may not do.'
+        - '&8/ob settings'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob settings'
+  sethome:
+    slot: 16
+    item:
+      material: 'RED_BED'
+      name: '&6Set Island Home'
+      lore:
+        - '&7Set thy home where thou standest.'
+        - '&8/ob sethome'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob sethome'
+  invite:
+    slot: 20
+    item:
+      material: 'NAME_TAG'
+      name: '&aInvite a Friend'
+      lore:
+        - '&7Invite a player to thine island.'
+        - '&8/ob team invite <player>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/ob team invite "}}, {"text": " to type ", "color": "gray"}, {"text": "/ob team invite <player>", "color": "yellow"}]'
+  accept:
+    slot: 21
+    item:
+      material: 'LIME_DYE'
+      name: '&aAccept Invite'
+      lore:
+        - '&7Accept an island invite.'
+        - '&8/ob team accept'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'ob team accept'
+  setname:
+    slot: 23
+    item:
+      material: 'OAK_SIGN'
+      name: '&eName Thine Island'
+      lore:
+        - '&7Give thine island a name.'
+        - '&8/ob setname <name>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/ob setname "}}, {"text": " to type ", "color": "gray"}, {"text": "/ob setname <name>", "color": "yellow"}]'
+  expel:
+    slot: 24
+    item:
+      material: 'IRON_BOOTS'
+      name: '&cExpel a Visitor'
+      lore:
+        - '&7Send a visitor off thine island.'
+        - '&8/ob expel <player>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/ob expel "}}, {"text": " to type ", "color": "gray"}, {"text": "/ob expel <player>", "color": "yellow"}]'
+  close:
+    slot: 31
+    item:
+      material: 'OAK_DOOR'
+      name: '&cClose'
+    actions:
+      - type: 'close'
