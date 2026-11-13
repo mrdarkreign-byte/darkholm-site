@@ -1,0 +1,328 @@
+name: '&8⚔ &b&lKingdoms &8⚔'
+size: 45
+fillItem:
+  material: 'GRAY_STAINED_GLASS_PANE'
+  name: '&r'
+items:
+  show:
+    slot: 10
+    item:
+      material: 'BOOK'
+      name: '&bThy Kingdom'
+      lore:
+        - '&7Members, land, power and relations.'
+        - '&8/k show'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k show'
+  top:
+    slot: 11
+    item:
+      material: 'GOLDEN_HELMET'
+      name: '&bTop Kingdoms'
+      lore:
+        - '&7The strongest kingdoms.'
+        - '&8/k top'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k top'
+  map:
+    slot: 12
+    item:
+      material: 'FILLED_MAP'
+      name: '&bKingdom Map'
+      lore:
+        - '&7Who owns the land around thee.'
+        - '&8/k map'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k map'
+  invites:
+    slot: 13
+    item:
+      material: 'PAPER'
+      name: '&bThy Invites'
+      lore:
+        - '&7Invitations waiting for thee.'
+        - '&8/k invites'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k invites'
+  chat:
+    slot: 14
+    item:
+      material: 'OAK_SIGN'
+      name: '&bKingdom Chat'
+      lore:
+        - '&7Switch chat channels.'
+        - '&8/k chat'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k chat'
+  home:
+    slot: 15
+    item:
+      material: 'RED_BED'
+      name: '&bKingdom Home'
+      lore:
+        - '&7Travel to thy kingdom''s home.'
+        - '&8/k home'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k home'
+  sethome:
+    slot: 16
+    item:
+      material: 'WHITE_BED'
+      name: '&bSet Kingdom Home'
+      lore:
+        - '&7Set the home where thou standest.'
+        - '&8/k sethome'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k sethome'
+  claim:
+    slot: 19
+    item:
+      material: 'GRASS_BLOCK'
+      name: '&aClaim This Land'
+      lore:
+        - '&7Claim the chunk thou standest in.'
+        - '&8/k claim'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k claim'
+  unclaim:
+    slot: 20
+    item:
+      material: 'COARSE_DIRT'
+      name: '&cUnclaim This Land'
+      lore:
+        - '&7Release the chunk thou standest in.'
+        - '&8/k unclaim'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k unclaim'
+  nexus:
+    slot: 21
+    item:
+      material: 'BEACON'
+      name: '&bSet Nexus'
+      lore:
+        - '&7Place thy kingdom''s nexus here.'
+        - '&8/k nexus'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k nexus'
+  accept:
+    slot: 22
+    item:
+      material: 'LIME_DYE'
+      name: '&aAccept Invite'
+      lore:
+        - '&7Accept an invitation to a kingdom.'
+        - '&8/k accept'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k accept'
+  decline:
+    slot: 23
+    item:
+      material: 'RED_DYE'
+      name: '&cDecline Invite'
+      lore:
+        - '&7Decline an invitation.'
+        - '&8/k decline'
+        - ''
+        - '&eClick to use'
+    actions:
+      - type: 'close'
+      - type: 'player_command'
+        commands:
+          - 'k decline'
+  challenge:
+    slot: 24
+    item:
+      material: 'IRON_SWORD'
+      name: '&cChallenge a Kingdom'
+      lore:
+        - '&7Plan an invasion.'
+        - '&8/k challenge <kingdom>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k challenge "}}, {"text": " to type ", "color": "gray"}, {"text": "/k challenge <kingdom>", "color": "yellow"}]'
+  bank:
+    slot: 25
+    item:
+      material: 'GOLD_INGOT'
+      name: '&eKingdom Bank'
+      lore:
+        - '&7Deposit or withdraw coin.'
+        - '&8/k bank <deposit|withdraw> <amount>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k bank "}}, {"text": " to type ", "color": "gray"}, {"text": "/k bank <deposit|withdraw> <amount>", "color": "yellow"}]'
+  create:
+    slot: 28
+    item:
+      material: 'WHITE_BANNER'
+      name: '&aFound a Kingdom'
+      lore:
+        - '&7Start thine own kingdom.'
+        - '&8/k create <name>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k create "}}, {"text": " to type ", "color": "gray"}, {"text": "/k create <name>", "color": "yellow"}]'
+  invite:
+    slot: 29
+    item:
+      material: 'NAME_TAG'
+      name: '&aInvite a Player'
+      lore:
+        - '&7Invite someone into thy kingdom.'
+        - '&8/k invite <player>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k invite "}}, {"text": " to type ", "color": "gray"}, {"text": "/k invite <player>", "color": "yellow"}]'
+  join:
+    slot: 30
+    item:
+      material: 'OAK_DOOR'
+      name: '&aJoin a Kingdom'
+      lore:
+        - '&7Join an open kingdom.'
+        - '&8/k join <kingdom>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k join "}}, {"text": " to type ", "color": "gray"}, {"text": "/k join <kingdom>", "color": "yellow"}]'
+  rename:
+    slot: 31
+    item:
+      material: 'ANVIL'
+      name: '&eRename Kingdom'
+      lore:
+        - '&7Give thy kingdom a new name.'
+        - '&8/k rename <name>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k rename "}}, {"text": " to type ", "color": "gray"}, {"text": "/k rename <name>", "color": "yellow"}]'
+  tag:
+    slot: 32
+    item:
+      material: 'NAME_TAG'
+      name: '&eKingdom Tag'
+      lore:
+        - '&7Set thy kingdom''s short tag.'
+        - '&8/k tag <tag>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k tag "}}, {"text": " to type ", "color": "gray"}, {"text": "/k tag <tag>", "color": "yellow"}]'
+  lore:
+    slot: 33
+    item:
+      material: 'WRITABLE_BOOK'
+      name: '&eKingdom Lore'
+      lore:
+        - '&7Write thy kingdom''s lore.'
+        - '&8/k lore <text>'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k lore "}}, {"text": " to type ", "color": "gray"}, {"text": "/k lore <text>", "color": "yellow"}]'
+  leave:
+    slot: 34
+    item:
+      material: 'BARRIER'
+      name: '&cLeave Kingdom'
+      lore:
+        - '&7Leave thy current kingdom.'
+        - '&8/k leave'
+        - ''
+        - '&eClick, then finish typing in chat'
+    actions:
+      - type: 'close'
+      - type: 'console_command'
+        commands:
+          - 'minecraft:tellraw %player% ["", {"text": "⚔ ", "color": "gold"}, {"text": "Click here", "color": "yellow", "underlined": true, "click_event": {"action": "suggest_command", "command": "/k leave"}}, {"text": " to type ", "color": "gray"}, {"text": "/k leave", "color": "yellow"}]'
+  close:
+    slot: 40
+    item:
+      material: 'OAK_DOOR'
+      name: '&cClose'
+    actions:
+      - type: 'close'
