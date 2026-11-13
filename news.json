@@ -1,5 +1,26 @@
 [
  {
+  "id": "follow-on-x",
+  "date": "2026-11-13",
+  "tag": "Community",
+  "title": "Darkholm is on X, and has its own email",
+  "summary": "Follow @darkholmlive for news, clips and contest winners, and reach staff at support@darkholm.live."
+ },
+ {
+  "id": "darkholm-pass",
+  "date": "2026-11-12",
+  "tag": "Battle Pass",
+  "title": "The Darkholm Pass",
+  "summary": "A monthly battle pass with daily and weekly quests, 30 tiers of rewards and a season leaderboard. Open it with /pass."
+ },
+ {
+  "id": "oneblock-reinforced-deepslate",
+  "date": "2026-11-12",
+  "tag": "OneBlock",
+  "title": "No more reinforced deepslate in OneBlock",
+  "summary": "Reinforced deepslate no longer comes up in the Deep Dark phase."
+ },
+ {
   "id": "monthly-build-contest",
   "date": "2026-11-12",
   "tag": "Community",

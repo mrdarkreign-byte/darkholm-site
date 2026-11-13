@@ -6,6 +6,30 @@
   <description>Updates and events on the Darkholm Minecraft server.</description>
   <language>en</language>
   <item>
+    <title>Darkholm is on X, and has its own email</title>
+    <link>https://darkholm.live/news.html#follow-on-x</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#follow-on-x</guid>
+    <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Community</category>
+    <description>Follow @darkholmlive for news, clips and contest winners, and reach staff at support@darkholm.live. X: @darkholmlive. Email staff at support@darkholm.live. The Discord is still the fastest way to reach staff.</description>
+  </item>
+  <item>
+    <title>The Darkholm Pass</title>
+    <link>https://darkholm.live/news.html#darkholm-pass</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#darkholm-pass</guid>
+    <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Battle Pass</category>
+    <description>A monthly battle pass with daily and weekly quests, 30 tiers of rewards and a season leaderboard. Open it with /pass. Three daily quests reset at midnight and three weekly quests reset on Monday (Pacific time): mining, farming, fishing, slaying, building, voting and more. Every 1,000 XP is a new tier. The free track has crate keys, golden apples, XP bottles, Mending and other enchanted books, a totem and six titles. Donor ranks also get a cosmetic premium track: banners, armor trims and four more titles. Wear a title next to your name in chat with /pass titles. Everything resets on the 1st of each month, and the season&#x27;s top three earn a title for that month. Quests don&#x27;t count in the Great Hall.</description>
+  </item>
+  <item>
+    <title>No more reinforced deepslate in OneBlock</title>
+    <link>https://darkholm.live/news.html#oneblock-reinforced-deepslate</link>
+    <guid isPermaLink="true">https://darkholm.live/news.html#oneblock-reinforced-deepslate</guid>
+    <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+    <category>OneBlock</category>
+    <description>Reinforced deepslate no longer comes up in the Deep Dark phase. No tool could speed it up, so each one took about 80 seconds to break.</description>
+  </item>
+  <item>
     <title>The monthly build contest</title>
     <link>https://darkholm.live/news.html#monthly-build-contest</link>
     <guid isPermaLink="true">https://darkholm.live/news.html#monthly-build-contest</guid>
