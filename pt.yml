@@ -1,0 +1,29 @@
+
+# Free ranks for time played on Darkholm (all realms count). Checked every check-minutes and on join.
+# A player who already holds the rank or a better one is left alone. Each tier is given once. Who got what: playtime-ranks.yml
+playtime-ranks:
+  enabled: true
+  check-minutes: 5
+  tiers:
+    squire:
+      hours: 12
+      group: squire
+    knight:
+      hours: 24
+      group: knight
+  # LuckPerms weights; any other group (staff) counts as better than every reward
+  weights:
+    squire: 10
+    knight: 20
+    baron: 30
+    viscount: 40
+    earl: 50
+    duke: 60
+    archduke: 70
+    king: 80
+  message:
+    - "&8&m                                                  "
+    - "&6&l⚜ &e%hours% hours in Darkholm, %player%!"
+    - "&7Thy loyalty is rewarded with the &a%rank% &7rank. Thank you for playing."
+    - "&8&m                                                  "
+  broadcast: "&6⚜ &e%player% &7has earned the &a%rank% &7rank for %hours% hours in the realm."
