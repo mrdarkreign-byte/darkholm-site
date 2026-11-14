@@ -220,7 +220,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
 <main>
 <!-- HOME -->
 <section class="page" id="p-home"><div class="wrap stack">
-  <div class="head"><p class="eyebrow">The Realm</p><h2 class="gilt">Factions First</h2><div class="flourish" aria-hidden="true">⚜</div><p class="lede">Your first time in, you arrive at the castle of Darkholm, ready for war. The other realms wait behind the gates of the Great Hall (<span class="k">/spawn</span>). Each realm keeps its own inventory, armour, XP, health and ender chest. Your coin and Vote Keys come with you everywhere.</p></div>
+  <div class="head"><p class="eyebrow">The Realm</p><h2 class="gilt">Factions First</h2><div class="flourish" aria-hidden="true">⚜</div><p class="lede">Your first time in, you arrive at the castle of Darkholm, ready for war. The other realms wait behind the gates of the Great Hall (<span class="k">/warp hub</span>). <span class="k">/spawn</span> always returns you to the spawn of the realm you're in. Each realm keeps its own inventory, armour, XP, health and ender chest. Your coin and Vote Keys come with you everywhere.</p></div>
   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
     <div class="panel realm" style="--c:#FFAA00"><span class="sigil"></span><h3>North Gate<br>Factions</h3><p>The heart of Darkholm and ready for wars and raiding. Hard difficulty: found a faction, claim chunks, set relations and fight for land. Power grows 5 per hour and drops 1 per death.</p><p class="k">/f create &lt;name&gt;</p></div>
     <div class="panel realm" style="--c:#55FFFF"><span class="sigil"></span><h3>West Gate<br>The Adventurers' Guild</h3><p>Ready for dungeons and raids. Story dungeons, lairs, enchantment challenges, classes and the Guild Exchange across every EliteMobs world. Deaths here cost no faction power.</p><p class="k">/ag</p></div>
@@ -274,7 +274,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
     </div>
   </div>
   <div class="grid g3">
-    <div class="panel"><h3>First steps</h3><p>Read the START HERE panel at the castle, then follow the walls for more. <span class="k">/spawn</span> opens the Great Hall and its gates. <span class="k">/wild</span> sends you to a random spot in the wilds (5 minute cooldown). Set a home with <span class="k">/sethome</span>.</p></div>
+    <div class="panel"><h3>First steps</h3><p>Read the START HERE panel at the castle, then follow the walls for more. <span class="k">/warp hub</span> opens the Great Hall and its gates. <span class="k">/wild</span> sends you to a random spot in the wilds (5 minute cooldown). Set a home with <span class="k">/sethome</span>.</p></div>
     <div class="panel"><h3>Link your Discord</h3><p>Run <span class="k">/discord link</span> in game and DM the code to the Darkholm bot in our Discord.</p></div>
     <div class="panel"><h3>Vote daily</h3><p>Every vote pays $91, 5 levels and a Vote Key. See the <a href="#vote">vote page</a>.</p></div>
   </div>
@@ -309,7 +309,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
     <div class="panel"><h3>Vote streaks</h3><p class="k">7 days in a row: $1,000 + 20 levels<br>30 days in a row: $5,000 + 50 levels</p></div>
     <div class="panel"><h3>Top voters each month</h3><p class="k">1st: $10,000 + 100 levels + 3 Emerald Keys<br>2nd: 2 Gold Keys<br>3rd: 1 Gold Key</p><p>Check the race with <span class="k">/vote top</span>.</p></div>
   </div>
-  <p class="lede">Open Vote Keys at the Vote Crate in the Great Hall (<span style="font-family:var(--pixel);color:#FFFF55">/spawn</span>), or in the castle hall (<span style="font-family:var(--pixel);color:#FFFF55">/warp darkholm</span>). It can drop tier keys: <span class="mc6">Bronze</span>, <span class="mcf">Silver</span>, <span class="mce">Gold</span>, <span class="mca">Emerald</span>, <span class="mcd">Enchanter</span> and <span class="mcc">Spawner</span>.</p>
+  <p class="lede">Open Vote Keys at the Vote Crate in the Great Hall (<span style="font-family:var(--pixel);color:#FFFF55">/warp hub</span>), or in the castle hall (<span style="font-family:var(--pixel);color:#FFFF55">/warp darkholm</span>). It can drop tier keys: <span class="mc6">Bronze</span>, <span class="mcf">Silver</span>, <span class="mce">Gold</span>, <span class="mca">Emerald</span>, <span class="mcd">Enchanter</span> and <span class="mcc">Spawner</span>.</p>
   <div class="votes" id="votes"></div>
 </div></section>
 </main>
@@ -366,7 +366,8 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &7Type &e/help <topic> &7to read a chapter:
 #travel
 &6&l⚜ Travel ⚜
-&e/spawn &8- &7Return to the Great Hall (the hub)
+&e/spawn &8- &7Thy realm's spawn: the Factions castle, the Kingdoms castle or the Guild
+&e/warp hub &8- &7The Great Hall, from anywhere
 &e/warp darkholm &8- &7The castle of Darkholm
 &e/warp kingdoms &8- &7The Kingdoms castle
 &e/wild &8- &7Venture to a random place in the wilds (5 min cooldown)
@@ -450,7 +451,7 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/ob phases &8- &7See the phases ahead
 &e/ob count &8- &7Blocks broken so far
 &7OneBlock keeps its own inventory, XP and ender chest.
-&e/spawn &7returns thee to the Great Hall.
+&e/warp hub &7returns thee to the Great Hall.
 #food
 &6&l⚜ Auto-Eat ⚜
 &7When hunger falls, food from thy pack is eaten for thee.
@@ -459,7 +460,8 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/bf toggleEating &8- &7Turn auto-eat off or on
 #spawn
 &6&l⚜ The Great Hall & the Castle ⚜
-&e/spawn &8- &7The Great Hall, where every journey begins
+&e/warp hub &8- &7The Great Hall, where every journey begins
+&e/spawn &8- &7Back to the spawn of the realm thou art in
 &6North gate &8- &7Factions: the castle and the realm of Darkholm
 &bWest gate &8- &7The Adventurer's Guild and EliteMobs
 &bKingdoms gate &8- &7west wall, beside the Guild
