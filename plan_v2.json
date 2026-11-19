@@ -1,0 +1,805 @@
+{
+ "anchor": [
+  160,
+  -60,
+  0
+ ],
+ "min": [
+  160,
+  -60,
+  0
+ ],
+ "max": [
+  256,
+  -41,
+  348
+ ],
+ "builds": [
+  {
+   "name": "nexus",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    164,
+    -60,
+    8
+   ],
+   "size": [
+    9,
+    4,
+    9
+   ]
+  },
+  {
+   "name": "nexus",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    182,
+    -60,
+    8
+   ],
+   "size": [
+    11,
+    7,
+    11
+   ]
+  },
+  {
+   "name": "nexus",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    202,
+    -60,
+    8
+   ],
+   "size": [
+    13,
+    15,
+    13
+   ]
+  },
+  {
+   "name": "nexus",
+   "lv": 4,
+   "kind": "structures",
+   "origin": [
+    225,
+    -60,
+    8
+   ],
+   "size": [
+    16,
+    17,
+    16
+   ]
+  },
+  {
+   "name": "nexus",
+   "lv": 5,
+   "kind": "structures",
+   "origin": [
+    249,
+    -60,
+    8
+   ],
+   "size": [
+    16,
+    18,
+    16
+   ]
+  },
+  {
+   "name": "outpost",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    163,
+    -60,
+    35
+   ],
+   "size": [
+    7,
+    4,
+    7
+   ]
+  },
+  {
+   "name": "outpost",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    180,
+    -60,
+    35
+   ],
+   "size": [
+    11,
+    6,
+    12
+   ]
+  },
+  {
+   "name": "outpost",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    202,
+    -60,
+    35
+   ],
+   "size": [
+    16,
+    18,
+    16
+   ]
+  },
+  {
+   "name": "extractor",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    163,
+    -60,
+    62
+   ],
+   "size": [
+    7,
+    7,
+    7
+   ]
+  },
+  {
+   "name": "extractor",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    179,
+    -60,
+    62
+   ],
+   "size": [
+    9,
+    8,
+    9
+   ]
+  },
+  {
+   "name": "extractor",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    200,
+    -60,
+    62
+   ],
+   "size": [
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "warppad",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    163,
+    -60,
+    89
+   ],
+   "size": [
+    7,
+    2,
+    7
+   ]
+  },
+  {
+   "name": "warppad",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    179,
+    -60,
+    89
+   ],
+   "size": [
+    9,
+    6,
+    9
+   ]
+  },
+  {
+   "name": "warppad",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    200,
+    -60,
+    89
+   ],
+   "size": [
+    16,
+    11,
+    16
+   ]
+  },
+  {
+   "name": "regulator",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    163,
+    -60,
+    116
+   ],
+   "size": [
+    7,
+    5,
+    7
+   ]
+  },
+  {
+   "name": "regulator",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    180,
+    -60,
+    116
+   ],
+   "size": [
+    11,
+    9,
+    9
+   ]
+  },
+  {
+   "name": "regulator",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    202,
+    -60,
+    116
+   ],
+   "size": [
+    16,
+    20,
+    16
+   ]
+  },
+  {
+   "name": "powercell",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    163,
+    -60,
+    143
+   ],
+   "size": [
+    7,
+    7,
+    7
+   ]
+  },
+  {
+   "name": "powercell",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    183,
+    -60,
+    143
+   ],
+   "size": [
+    16,
+    15,
+    16
+   ]
+  },
+  {
+   "name": "siege-cannon",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    162,
+    -60,
+    170
+   ],
+   "size": [
+    5,
+    2,
+    7
+   ]
+  },
+  {
+   "name": "siege-cannon",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    177,
+    -60,
+    170
+   ],
+   "size": [
+    9,
+    4,
+    9
+   ]
+  },
+  {
+   "name": "siege-cannon",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    198,
+    -60,
+    170
+   ],
+   "size": [
+    16,
+    8,
+    16
+   ]
+  },
+  {
+   "name": "national-nexus",
+   "lv": 1,
+   "kind": "structures",
+   "origin": [
+    166,
+    -60,
+    197
+   ],
+   "size": [
+    13,
+    15,
+    13
+   ]
+  },
+  {
+   "name": "national-nexus",
+   "lv": 2,
+   "kind": "structures",
+   "origin": [
+    189,
+    -60,
+    197
+   ],
+   "size": [
+    16,
+    17,
+    16
+   ]
+  },
+  {
+   "name": "national-nexus",
+   "lv": 3,
+   "kind": "structures",
+   "origin": [
+    213,
+    -60,
+    197
+   ],
+   "size": [
+    16,
+    18,
+    16
+   ]
+  },
+  {
+   "name": "arrow",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    219
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "arrow",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    219
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "arrow",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    219
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "flame",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    237
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "flame",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    237
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "flame",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    237
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "hellfire",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    255
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "hellfire",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    255
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "hellfire",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    255
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "inferno",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    273
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "inferno",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    273
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "inferno",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    273
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "heatbeam",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    291
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "heatbeam",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    291
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "heatbeam",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    291
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "psionic",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    309
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "psionic",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    309
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "psionic",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    309
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "healing",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    327
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "healing",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    327
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "healing",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    327
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  },
+  {
+   "name": "soldier",
+   "lv": 1,
+   "kind": "turrets",
+   "origin": [
+    162,
+    -60,
+    345
+   ],
+   "size": [
+    5,
+    3,
+    5
+   ]
+  },
+  {
+   "name": "soldier",
+   "lv": 2,
+   "kind": "turrets",
+   "origin": [
+    175,
+    -60,
+    345
+   ],
+   "size": [
+    5,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "soldier",
+   "lv": 3,
+   "kind": "turrets",
+   "origin": [
+    189,
+    -60,
+    345
+   ],
+   "size": [
+    7,
+    12,
+    7
+   ]
+  }
+ ],
+ "signs": [
+  "setblock 164 -60 14 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Nexus\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 182 -60 15 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Nexus\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 202 -60 16 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Nexus\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 225 -60 17 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Nexus\",\"Level 4\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 249 -60 17 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Nexus\",\"Level 5\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 163 -60 40 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Outpost\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 180 -60 43 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Outpost\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 202 -60 44 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Outpost\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 163 -60 67 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Extractor\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 179 -60 68 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Extractor\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 200 -60 71 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Extractor\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 163 -60 94 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Warppad\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 179 -60 95 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Warppad\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 200 -60 98 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Warppad\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 163 -60 121 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Regulator\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 180 -60 122 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Regulator\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 202 -60 125 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Regulator\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 163 -60 148 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Powercell\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 183 -60 152 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Powercell\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 175 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Siege Cannon\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 177 -60 176 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Siege Cannon\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 198 -60 179 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Siege Cannon\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 166 -60 205 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"National Nexus\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 206 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"National Nexus\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 213 -60 206 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"National Nexus\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 223 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Arrow Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 223 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Arrow Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 224 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Arrow Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 241 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Flame Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 241 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Flame Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 242 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Flame Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 259 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Hellfire Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 259 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Hellfire Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 260 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Hellfire Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 277 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Inferno Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 277 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Inferno Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 278 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Inferno Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 295 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Heatbeam Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 295 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Heatbeam Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 296 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Heatbeam Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 313 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Psionic Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 313 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Psionic Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 314 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Psionic Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 331 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Healing Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 331 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Healing Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 332 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Healing Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 162 -60 349 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Soldier Turret\",\"Level 1\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 175 -60 349 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Soldier Turret\",\"Level 2\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}",
+  "setblock 189 -60 350 minecraft:spruce_sign[rotation=0]{front_text:{messages:[\"\",\"Soldier Turret\",\"Level 3\",\"\"],color:\"black\",has_glowing_text:0b},is_waxed:1b}"
+ ]
+}
