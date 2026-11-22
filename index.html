@@ -223,7 +223,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
   <div class="head"><p class="eyebrow">The Realm</p><h2 class="gilt">Factions First</h2><div class="flourish" aria-hidden="true">⚜</div><p class="lede">Your first time in, you arrive at the castle of Darkholm, ready for war. The other realms wait behind the gates of the Great Hall (<span class="k">/warp hub</span>). <span class="k">/spawn</span> always returns you to the spawn of the realm you're in. Each realm keeps its own inventory, armour, XP, health, ender chest and coin. Your Vote Keys come with you everywhere.</p></div>
   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
     <div class="panel realm" style="--c:#FFAA00"><span class="sigil"></span><h3>North Gate<br>Factions</h3><p>The heart of Darkholm and ready for wars and raiding. Hard difficulty: found a faction, claim chunks, set relations and fight for land. Power grows 5 per hour and drops 1 per death.</p><p class="k">/f create &lt;name&gt;</p></div>
-    <div class="panel realm" style="--c:#55FFFF"><span class="sigil"></span><h3>West Gate<br>The Adventurers' Guild</h3><p>Ready for dungeons and raids. Story dungeons, lairs, enchantment challenges, classes and the Guild Exchange across every EliteMobs world. Deaths here cost no faction power.</p><p class="k">/ag</p></div>
+    <div class="panel realm" style="--c:#55FFFF"><span class="sigil"></span><h3>West Gate<br>The Adventurers' Guild</h3><p>Ready for dungeons and raids. Story dungeons, lairs, enchantment challenges, classes and the Guild Exchange across every EliteMobs world. Elite mobs live only here, never in Factions or Kingdoms. Deaths here cost no faction power.</p><p class="k">/ag</p></div>
     <div class="panel realm" style="--c:#55CCFF"><span class="sigil"></span><h3>West Wall<br>Kingdoms</h3><p>New: found a kingdom, claim land around your nexus and unite kingdoms into nations, starting from the Kingdoms castle.</p><p class="k">/warp kingdoms</p></div>
     <div class="panel realm" style="--c:#55FF55"><span class="sigil"></span><h3>East Gate<br>The OneBlock Challenge</h3><p>For the sharp-minded Minecraft pros: one block, every phase, and nothing handed to you. Invite friends to build it with you.</p><p class="k">/ob</p><p><a href="oneblock-farm.html">Build guide: the Loot Flush Farm</a></p></div>
   </div>
@@ -412,7 +412,7 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/f relation set <faction> <ally|truce|neutral|enemy>
 &7Power: +5 per hour, -1 per death.
 &7Darkholm is the realm of war and raiding. Walk through the &6north gate &7in the Great Hall.
-&cWands and staves have no power in the Factions worlds.
+&cElite mobs live only in the Guild and its dungeons. Elite gear has no power in Factions or Kingdoms.
 #skills
 &6&l⚜ mcMMO Skills ⚜
 &e/mcstats &8- &7Thy skill levels
@@ -429,6 +429,7 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/em party leave &8- &7Leave thy party
 &7Walk through the &bwest gate &7in the Great Hall to reach the Guild.
 &7The Guild and every EliteMobs world keep their own inventory, XP and ender chest.
+&7Elite mobs, bosses and elite gear powers are found only in the Guild and its dungeon worlds.
 &7Deaths in Guild lands cost no faction power.
 &7Every dungeon has a portal in the &6Portal Hall&7: &e/warp portalhall
 #portals
