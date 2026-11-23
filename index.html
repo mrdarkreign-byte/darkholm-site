@@ -223,8 +223,8 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
   <div class="head"><p class="eyebrow">The Realm</p><h2 class="gilt">Factions First</h2><div class="flourish" aria-hidden="true">⚜</div><p class="lede">Your first time in, you arrive at the castle of Darkholm, ready for war. The other realms wait behind the gates of the Great Hall (<span class="k">/warp hub</span>). <span class="k">/spawn</span> always returns you to the spawn of the realm you're in. Each realm keeps its own inventory, armour, XP, health, ender chest and coin. Your Vote Keys come with you everywhere.</p></div>
   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
     <div class="panel realm" style="--c:#FFAA00"><span class="sigil"></span><h3>North Gate<br>Factions</h3><p>The heart of Darkholm and ready for wars and raiding. Hard difficulty: found a faction, claim chunks, set relations and fight for land. Power grows 5 per hour and drops 1 per death.</p><p class="k">/f create &lt;name&gt;</p></div>
-    <div class="panel realm" style="--c:#55FFFF"><span class="sigil"></span><h3>West Gate<br>The Adventurers' Guild</h3><p>Ready for dungeons and raids. Story dungeons, lairs, enchantment challenges, classes and the Guild Exchange across every EliteMobs world. Elite mobs live only here, never in Factions or Kingdoms. Deaths here cost no faction power.</p><p class="k">/ag</p></div>
-    <div class="panel realm" style="--c:#55CCFF"><span class="sigil"></span><h3>West Wall<br>Kingdoms</h3><p>New: found a kingdom, claim land around your nexus and unite kingdoms into nations, starting from the Kingdoms castle.</p><p class="k">/warp kingdoms</p></div>
+    <div class="panel realm" style="--c:#55FFFF"><span class="sigil"></span><h3>West Gate<br>The Portal Hall &amp; the Guild</h3><p>Walk into the Portal Hall: every dungeon has an arch, and the Adventurers' Guild gate waits at its heart. Ready for dungeons and raids. Story dungeons, lairs, enchantment challenges, classes and the Guild Exchange across every EliteMobs world. Elite mobs live only here, never in Factions or Kingdoms. Deaths here cost no faction power.</p><p class="k">/ag</p></div>
+    <div class="panel realm" style="--c:#55CCFF"><span class="sigil"></span><h3>North Wall<br>Kingdoms</h3><p>New: found a kingdom, claim land around your nexus and unite kingdoms into nations, starting from the Kingdoms castle.</p><p class="k">/warp kingdoms</p></div>
     <div class="panel realm" style="--c:#55FF55"><span class="sigil"></span><h3>East Gate<br>The OneBlock Challenge</h3><p>For the sharp-minded Minecraft pros: one block, every phase, and nothing handed to you. Invite friends to build it with you.</p><p class="k">/ob</p><p><a href="oneblock-farm.html">Build guide: the Loot Flush Farm</a></p></div>
   </div>
   <div id="newsWrap" class="stack hidden">
@@ -249,6 +249,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
   <div class="grid g3">
     <div class="panel"><h3>The Castle</h3><p>Daily chests around the fountain, four corner towers with lifts, a garden, stables and a smithy. No fall, fire or drowning damage on the castle grounds.</p><p class="k">/warp darkholm</p></div>
     <div class="panel"><h3>The Portal Hall</h3><p>A portal for every dungeon. Story dungeons, lairs and the Steamworks on Normal, Hard or Mythic.</p><p class="k">/warp portalhall</p></div>
+    <div class="panel"><h3>The Mob Arena</h3><p>Endless waves with a boss every fifth. Pick one of five classes, hold out with friends, and earn Factions coin and crate keys. One run every 2 hours.</p><p class="k">/ma join</p></div>
     <div class="panel"><h3>Duels</h3><p>Queue or challenge a player in Sword, Netherite, Axe, Mace or Crystal across four arenas. Kits are provided, and duels cost no faction power.</p><p class="k">/pvp</p></div>
     <div class="panel"><h3>mcMMO skills</h3><p>Level skills and climb the leaderboards. Fell whole wild trees with an axe (sneak to cut a single log).</p><p class="k">/mcstats</p></div>
     <div class="panel"><h3>Player auction house</h3><p>No admin shop. Everything for sale was found or crafted by a player. Explore the wilds, then sell what you bring back.</p><p class="k">/ah</p></div>
@@ -427,7 +428,7 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/gx &8- &7Guild Exchange: spend Elite Coins
 &e/em party invite <player> &8- &7Form a party
 &e/em party leave &8- &7Leave thy party
-&7Walk through the &bwest gate &7in the Great Hall to reach the Guild.
+&7Walk through the &bwest gate &7in the Great Hall to the Portal Hall; the Guild gate stands at its heart. Or &e/ag&7.
 &7The Guild and every EliteMobs world keep their own inventory, XP and ender chest.
 &7Elite mobs, bosses and elite gear powers are found only in the Guild and its dungeon worlds.
 &7Deaths in Guild lands cost no faction power.
@@ -435,7 +436,7 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 #portals
 &6&l⚜ The Portal Hall ⚜
 &e/warp portalhall &8- &7Travel to the hall
-&7Or walk through a &6golden gate &7in the castle library or on the upper walkway.
+&7Or walk through the &bwest gate &7of the Great Hall.
 &7Its portals take thee into thy EliteMobs inventory; thy Darkholm things wait for thee.
 &7Walk into an arch to open its entry menu.
 &6Story Dungeons &8- &7ground floor, west and east walls (3 day lockout)
@@ -465,13 +466,16 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/warp hub &8- &7The Great Hall, where every journey begins
 &e/spawn &8- &7Back to the spawn of the realm thou art in
 &6North gate &8- &7Factions: the castle and the realm of Darkholm
-&bWest gate &8- &7The Adventurer's Guild and EliteMobs
-&bKingdoms gate &8- &7west wall, beside the Guild
+&bWest gate &8- &7The Portal Hall: dungeons, lairs and the Adventurer's Guild
+&bKingdoms gate &8- &7north wall, right of Factions
+&cMob Arena gate &8- &7north wall, left of Factions
 &aEast gate &8- &7OneBlock: thine own island
 &7New travellers first arrive at the castle of Darkholm.
 &e/warp darkholm &8- &7The castle of Darkholm
 &7No harm from falls, fire or drowning in the hall or castle grounds.
-&6Portal Hall &8- &e/warp portalhall &7or the golden gate in the castle library
+&6Portal Hall &8- &7the west gate of the Great Hall, or &e/warp portalhall
+&cMob Arena &8- &7the gate in the castle library
+&6Crates &8- &7along the Great Hall's south wall
 &6Daily Chests &8- &7around the castle fountain, one claim a day
 &6Towers &8- &7four corner lookouts, ride the &e[Lift Up] &7signs
 &6Garden &8- &7flower garden, fish pond and gazebo, north-west
@@ -525,7 +529,7 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &7No faction power is lost in duels.
 #kingdoms
 &6&l⚜ Kingdoms ⚜
-&7Walk through the &bKingdoms gate &7on the west wall of the Great Hall, or &e/warp kingdoms&7.
+&7Walk through the &bKingdoms gate &7on the north wall of the Great Hall, right of Factions, or &e/warp kingdoms&7.
 &e/k help &8- &7Every kingdom command
 &e/k create <name> &8- &7Found a kingdom
 &e/k invite <player> &8- &7Invite a player
@@ -536,7 +540,20 @@ const HELP = String.raw`&6&l⚜ The Darkholm Codex ⚜
 &e/k nexus &8- &7Place thy kingdom's nexus
 &e/k nation &8- &7Unite kingdoms into a nation
 &7Kingdoms keeps its own inventory, XP and ender chest.
-&7The castle grounds are a safe zone, marked in glowstone.`;
+&7The castle grounds are a safe zone, marked in glowstone.
+#arena
+&6&l⚜ The Mob Arena ⚜
+&e/ma join &8- &7Enter the arena lobby
+&e/ma leave &8- &7Return to the Great Hall
+&e/ma top &8/ &e/ma stats &8- &7Leaderboard and thy record
+&7Or walk through the &cMob Arena gate &7in the Great Hall or the castle library.
+&7Left-click a class station to see its kit, right-click to take it.
+&7Classes: &2Ranger&7, &cSoldier&7, &fHealer&7, &9Tank&7, &6Berserker&7.
+&7Right-click the &6ready bell &7to start a 2 minute countdown. All ready? 10 seconds.
+&7Endless waves, with a &cboss &7every 5th wave.
+&7Rewards: &e$100 &7Factions coin per wave survived, a random crate key every 5 waves, &aEmerald keys &7past wave 20.
+&7Kits are given; thy own gear waits for thee. One run every &e2 hours&7.
+`;
 
 /* ---------- helpers ---------- */
 const $ = s => document.querySelector(s);
