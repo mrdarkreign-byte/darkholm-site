@@ -1,0 +1,27 @@
+name: Mirror leaderboards
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  tops:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch leaderboards from the server
+        run: |
+          curl -fsS --retry 3 --max-time 20 -o new.json http://15.235.110.104:8004/tops.json
+          python3 -c "import json;d=json.load(open('new.json'));assert 'mcmmo' in d and 'factions' in d"
+      - name: Commit if the lists changed
+        run: |
+          mkdir -p data
+          strip() { python3 -c "import json,sys;d=json.load(open(sys.argv[1]));d.pop('updated',None);print(json.dumps(d,sort_keys=True))" "$1" 2>/dev/null; }
+          if [ -f data/tops.json ] && [ "$(strip new.json)" = "$(strip data/tops.json)" ]; then echo "unchanged"; exit 0; fi
+          mv new.json data/tops.json
+          git config user.name "darkholm-bot"
+          git config user.email "darkholm-bot@users.noreply.github.com"
+          git add data/tops.json
+          git commit -m "Update leaderboards"
+          git push
