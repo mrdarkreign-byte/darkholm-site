@@ -168,6 +168,17 @@ section.page.on{display:block}
 
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
+.statusbar{background:#070a0c;border-top:1px solid #1c2a30;border-bottom:1px solid #1c2a30}
+.statusbar .sb{display:grid;grid-template-columns:repeat(3,1fr);min-height:92px}
+.statusbar .sbc{position:relative;display:grid;align-content:center;gap:4px;padding:16px 28px}
+.statusbar .sbc+.sbc{border-left:1px solid #1c2a30}
+.statusbar small{font-family:var(--display);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#9aa6ab}
+.statusbar b{color:#fff;font-size:1.05rem}
+.statusbar .sbmax{color:#8a969b;font-weight:400}
+.statusbar .sbdot{position:absolute;right:24px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:#6b7478}
+.statusbar .sbdot.on{background:#55dd77;box-shadow:0 0 0 5px rgba(85,221,119,.15),0 0 10px #55dd77}
+.statusbar .sbdot.off{background:#FFAA00;box-shadow:0 0 0 5px rgba(255,170,0,.15)}
+@media(max-width:640px){.statusbar .sb{grid-template-columns:1fr}.statusbar .sbc+.sbc{border-left:0;border-top:1px solid #1c2a30}}
 .live{display:inline-flex;gap:10px;align-items:center;font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment);text-shadow:0 2px 8px #000;flex-wrap:wrap;justify-content:center}
 .live .dot{width:9px;height:9px;border-radius:50%;background:#55FF55;box-shadow:0 0 8px #55FF55}
 .live .dc::before{content:"·";margin-right:10px;color:var(--gold)}
@@ -218,6 +229,12 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
     <p class="live" id="liveCount"><span class="dot" aria-hidden="true"></span><span class="txt">Checking the gates…</span><span class="dc hidden" id="dcCount"></span></p>
   </div>
 </div>
+
+<div class="statusbar" id="statusBar" aria-live="polite"><div class="wrap sb">
+  <div class="sbc"><small>Realm</small><b id="sbRealm">Checking…</b><span class="sbdot" id="sbDot" aria-hidden="true"></span></div>
+  <div class="sbc"><small>Players</small><b><span id="sbOn">–</span> <span class="sbmax">/ <span id="sbMax">100</span></span></b></div>
+  <div class="sbc"><small>Minecraft</small><b>Minecraft Java</b></div>
+</div></div>
 
 <main>
 <!-- HOME -->
@@ -767,10 +784,14 @@ const DISCORD_MIN = 50;
   const txt=live.querySelector('.txt');
   try{
     const j=await (await fetch('https://api.mcstatus.io/v2/status/java/play.darkholm.live')).json();
+    const sbR=document.getElementById('sbRealm'), sbD=document.getElementById('sbDot');
+    if(sbR){ sbR.textContent=j.online?'Online':'Offline'; sbD.classList.add(j.online?'on':'off');
+      document.getElementById('sbOn').textContent=j.online?((j.players&&j.players.online)||0):0;
+      if(j.players&&j.players.max) document.getElementById('sbMax').textContent=j.players.max; }
     if(j.online){const n=(j.players&&j.players.online)||0;
       txt.textContent = n>0 ? `${n} ${n===1?'adventurer':'adventurers'} in the realm now` : 'The realm is open: be the first in';}
     else{ txt.textContent='The gates are closed for a moment'; live.querySelector('.dot').style.background='#FFAA00'; }
-  }catch(e){ live.classList.add('hidden'); }
+  }catch(e){ live.classList.add('hidden'); const sb=document.getElementById('statusBar'); if(sb) sb.classList.add('hidden'); }
   try{
     const d=await (await fetch('https://discord.com/api/v9/invites/yGE9cgzbw?with_counts=true')).json();
     if(d.approximate_member_count>=DISCORD_MIN){const dc=document.getElementById('dcCount');
