@@ -1,0 +1,27 @@
+name: Mirror resource pack
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download current pack from the server
+        run: |
+          curl -fsSL --retry 3 -o Darkholm-Resource-Pack.zip http://15.235.110.104:8074/rspm.zip
+          unzip -tq Darkholm-Resource-Pack.zip
+          sha1sum Darkholm-Resource-Pack.zip | cut -d' ' -f1 > sha.txt
+      - name: Publish if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          NEW=$(cat sha.txt)
+          OLD=$(gh release view resource-pack --json body -q .body 2>/dev/null | grep -o 'sha1:[0-9a-f]*' | cut -d: -f2 || true)
+          if [ "$NEW" = "$OLD" ]; then echo "unchanged"; exit 0; fi
+          gh release view resource-pack >/dev/null 2>&1 || gh release create resource-pack --title "Darkholm Resource Pack" --notes "sha1:$NEW" --latest=false
+          gh release upload resource-pack Darkholm-Resource-Pack.zip --clobber
+          gh release edit resource-pack --notes "Updated $(date -u +%F). sha1:$NEW"
