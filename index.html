@@ -160,6 +160,7 @@ section.page.on{display:block}
 .hidden{display:none!important}
 
 /* vote */
+.tops{margin:0;padding-left:1.6em;display:grid;gap:4px;font-family:var(--pixel);font-size:1.25rem}.tops li::marker{color:var(--gold-hi)}.tops .n{color:#fff}.tops .v{color:#FFFF55}.tops .m{color:#9fb0b8}
 .votes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
 .vote{display:flex;justify-content:space-between;align-items:center;gap:12px;background:linear-gradient(180deg,#1a1719,#100f11);border:1px solid var(--line);padding:12px 14px}
 .vote span{font-weight:500}
@@ -192,6 +193,7 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
     <a href="#store">Store</a>
     <a href="#codex">Help</a>
     <a href="#vote">Vote</a>
+    <a href="#tops">Rankings</a>
     <a href="tutorials.html">Tutorials</a>
     <a href="https://discord.gg/yGE9cgzbw">Discord</a>
   </nav>
@@ -300,6 +302,15 @@ footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
   <p class="lede hidden" id="noHits">Nothing matches that. Try a shorter word, or ask in the Discord.</p>
 </div></section>
 
+<!-- TOPS -->
+<section class="page" id="p-tops"><div class="wrap stack">
+  <div class="head"><p class="eyebrow">Glory of the Realm</p><h2 class="gilt">Rankings</h2><div class="flourish" aria-hidden="true">⚜</div><p class="lede">The mightiest players and factions of Darkholm. These lists also hang in the castle hall at <span class="k" style="font-family:var(--pixel);color:#FFFF55">/warp darkholm</span>.</p></div>
+  <div class="grid g2">
+    <div class="panel"><h3>Masters of the Realm</h3><p>mcMMO power level: every skill level added together.</p><ol class="tops" id="topsMcmmo"><li>Loading…</li></ol></div>
+    <div class="panel"><h3>Mightiest Factions</h3><p>Ranked by faction power. Members in brackets.</p><ol class="tops" id="topsFactions"><li>Loading…</li></ol></div>
+  </div>
+  <p class="lede" id="topsUpdated"></p>
+</div></section>
 <!-- VOTE -->
 <section class="page" id="p-vote"><div class="wrap stack">
   <div class="head"><p class="eyebrow">Rally the Realm</p><h2 class="gilt">Vote for Darkholm</h2><div class="flourish" aria-hidden="true">⚜</div><p class="lede">Votes push Darkholm up the server lists and pay you in game. Use your exact in-game name on each site.</p></div>
@@ -720,7 +731,7 @@ function drawSky(){
 }
 
 /* ---------- routing + copy ---------- */
-const PAGES=['home','play','store','codex','vote'];
+const PAGES=['home','play','store','codex','vote','tops'];
 function route(){
   let h=location.hash.slice(1); let anchor=null;
   if(h.startsWith('help-')){ anchor=h; h='codex'; }
@@ -734,7 +745,17 @@ document.addEventListener('click',async e=>{
   try{ await navigator.clipboard.writeText(b.dataset.copy); const t=$('#toast'); t.textContent='Copied '+b.dataset.copy; t.classList.add('on'); setTimeout(()=>t.classList.remove('on'),1400);}catch(_){ b.textContent='Select & copy'; }
 });
 window.addEventListener('hashchange',route);
-buildCodex(); buildStore(); buildVotes(); buildGallery(); route(); try{drawSky();}catch(e){}
+async function buildTops(){
+  const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  try{
+    const d=await (await fetch('data/tops.json',{cache:'no-cache'})).json();
+    const m=$('#topsMcmmo'), f=$('#topsFactions');
+    m.innerHTML=d.mcmmo.length?d.mcmmo.map(r=>`<li><span class="n">${esc(r.name)}</span> <span class="v">${r.power}</span></li>`).join(''):'<li>No one yet. Be the first!</li>';
+    f.innerHTML=d.factions.length?d.factions.map(r=>`<li><span class="n">${esc(r.name)}</span> <span class="v">${r.power} power</span> <span class="m">(${r.members})</span></li>`).join(''):'<li>No factions yet.</li>';
+    if(d.updated) $('#topsUpdated').textContent='Last updated '+new Date(d.updated).toLocaleString();
+  }catch(e){ $('#topsMcmmo').innerHTML=$('#topsFactions').innerHTML='<li>Rankings are not available right now.</li>'; }
+}
+buildCodex(); buildStore(); buildVotes(); buildGallery(); buildTops(); route(); try{drawSky();}catch(e){}
 let rt; window.addEventListener('resize',()=>{clearTimeout(rt); rt=setTimeout(drawSky,150);});
 
 </script>
