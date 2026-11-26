@@ -1,5 +1,12 @@
 [
  {
+  "id": "thanksgiving-feast",
+  "date": "2026-11-25",
+  "tag": "Events",
+  "title": "The Thanksgiving Feast: a free rank for every player",
+  "summary": "On Thursday 26 November, from midnight to midnight Pacific, play one hour and rise one rank, free. Every title counts, from Squire to King. Kings receive crate keys instead."
+ },
+ {
   "id": "earn-thy-title",
   "date": "2026-11-14",
   "tag": "Ranks",
